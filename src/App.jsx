@@ -8,13 +8,18 @@ import './App.css'
 import Anuncios from './components/Users/User'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [user, setUser] = useState()
+
+  const UserContext = React.createContext();
+
   return (
-    <div className="App">
-      <header className="App-header">
-      <Anuncios/>
-      </header>
-    </div>
+    <UserContext.Provider value={{user, setUser}}>
+      <div className="App">
+        <header className="App-header">
+          <Anuncios/>
+        </header>
+      </div>
+    </UserContext.Provider>
   )
 }
 

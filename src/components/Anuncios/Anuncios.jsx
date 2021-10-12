@@ -3,8 +3,8 @@ import React from 'react'
 
 const Anuncios = ({ anuncios = [] }) => {
 	return (
-		<div className="container mt-5">
-			<h2 className="m-5">Lista de Anuncios</h2>		
+		
+			
 			<div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 				{anuncios.map((item, index) => (
 					<div key={index} className="col">
@@ -28,7 +28,6 @@ const Anuncios = ({ anuncios = [] }) => {
 					</div>
 				))}
 			</div>
-		</div>
 	)
 }
 
